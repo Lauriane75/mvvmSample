@@ -19,12 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        UITabBar.appearance().tintColor = .red
+
         let client = HTTPClient()
+
         let stack = CoreDataStack(modelName: "mvvmSample",
                                   type: .prod)
         context = Context(client: client, stack: stack)
+        let screens = Screens(context: context)
         appCoordinator = AppCoordinator(appDelegate: self,
-                                        context: context, stack: stack)
+                                        context: context,
+                                        screens: screens)
         appCoordinator?.start()
         return true
     }

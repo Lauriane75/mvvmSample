@@ -24,12 +24,11 @@
 		F6D76E24241BC11D0055C70D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E23241BC11D0055C70D /* HTTPClient.swift */; };
 		F6D76E26241BC12E0055C70D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E25241BC12E0055C70D /* Token.swift */; };
 		F6D76E28241BC22D0055C70D /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E27241BC22D0055C70D /* Screens.swift */; };
-		F6D76E2A241BC2750055C70D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E29241BC2750055C70D /* MainCoordinator.swift */; };
-		F6D76E2C241BC3160055C70D /* TabBarSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E2B241BC3160055C70D /* TabBarSource.swift */; };
 		F6D76E2E241BC3E00055C70D /* FirstCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E2D241BC3E00055C70D /* FirstCoordinator.swift */; };
 		F6D76E30241BC6C00055C70D /* SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E2F241BC6C00055C70D /* SecondCoordinator.swift */; };
 		F6D76E33241BCA920055C70D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E32241BCA920055C70D /* Repository.swift */; };
 		F6D76E35241BCB460055C70D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D76E34241BCB460055C70D /* Alert.swift */; };
+		F6DD618A242A74B0008E757C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DD6189242A74B0008E757C /* CoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,12 +63,11 @@
 		F6D76E23241BC11D0055C70D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		F6D76E25241BC12E0055C70D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F6D76E27241BC22D0055C70D /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
-		F6D76E29241BC2750055C70D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		F6D76E2B241BC3160055C70D /* TabBarSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSource.swift; sourceTree = "<group>"; };
 		F6D76E2D241BC3E00055C70D /* FirstCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCoordinator.swift; sourceTree = "<group>"; };
 		F6D76E2F241BC6C00055C70D /* SecondCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinator.swift; sourceTree = "<group>"; };
 		F6D76E32241BCA920055C70D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F6D76E34241BCB460055C70D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F6DD6189242A74B0008E757C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +132,6 @@
 				F67A76B3241BA17E002F6840 /* AppDelegate.swift */,
 				F6D76E0D241BBC8C0055C70D /* Context.swift */,
 				F6D76E0F241BBCAA0055C70D /* CoredataStack.swift */,
-				F6D76E11241BBCCE0055C70D /* AppCoordinator.swift */,
 				F6D76E14241BBFE40055C70D /* App */,
 			);
 			path = Sources;
@@ -175,9 +172,9 @@
 		F6D76E15241BBFFB0055C70D /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				F6D76E11241BBCCE0055C70D /* AppCoordinator.swift */,
+				F6DD6189242A74B0008E757C /* CoordinatorProtocol.swift */,
 				F6D76E27241BC22D0055C70D /* Screens.swift */,
-				F6D76E29241BC2750055C70D /* MainCoordinator.swift */,
-				F6D76E2B241BC3160055C70D /* TabBarSource.swift */,
 				F6D76E2D241BC3E00055C70D /* FirstCoordinator.swift */,
 				F6D76E2F241BC6C00055C70D /* SecondCoordinator.swift */,
 			);
@@ -321,7 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D76E1C241BC0870055C70D /* SecondViewModel.swift in Sources */,
-				F6D76E2A241BC2750055C70D /* MainCoordinator.swift in Sources */,
+				F6DD618A242A74B0008E757C /* CoordinatorProtocol.swift in Sources */,
 				F6D76E0E241BBC8C0055C70D /* Context.swift in Sources */,
 				F6D76E1A241BC07E0055C70D /* FirstViewModel.swift in Sources */,
 				F6D76E26241BC12E0055C70D /* Token.swift in Sources */,
@@ -331,7 +328,6 @@
 				F6D76E1E241BC09A0055C70D /* FirstViewController.swift in Sources */,
 				F6D76E30241BC6C00055C70D /* SecondCoordinator.swift in Sources */,
 				F6D76E24241BC11D0055C70D /* HTTPClient.swift in Sources */,
-				F6D76E2C241BC3160055C70D /* TabBarSource.swift in Sources */,
 				F67A76B4241BA17E002F6840 /* AppDelegate.swift in Sources */,
 				F6D76E12241BBCCE0055C70D /* AppCoordinator.swift in Sources */,
 				F6D76E28241BC22D0055C70D /* Screens.swift in Sources */,

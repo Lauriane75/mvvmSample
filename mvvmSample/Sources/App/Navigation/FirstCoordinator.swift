@@ -12,18 +12,23 @@ final class FirstCoordinator {
 
     // MARK: - Properties
 
-    private let presenter: UINavigationController
+    private let navigationController: UINavigationController
+
+    var childCoordinator: CoordinatorProtocol? = nil
 
     private let screens: Screens
 
     // MARK: - Initializer
 
     init(presenter: UINavigationController, screens: Screens) {
-        self.presenter = presenter
+        self.navigationController = presenter
         self.screens = screens
     }
+}
 
-    // MARK: - Coodinator
+    // MARK: - CoordinatorProtocol
+
+extension FirstCoordinator: CoordinatorProtocol {
 
     func start() {
         showFirstView()
@@ -31,18 +36,19 @@ final class FirstCoordinator {
 
     private func showFirstView() {
         let viewController = screens.createFirstViewController(delegate: self)
-        presenter.viewControllers = [viewController]
+        navigationController.viewControllers = [viewController]
     }
 
     private func showAlert(for type: AlertType) {
         let alert = screens.createAlertView(for: type)
-        presenter.visibleViewController?.present(alert, animated: true, completion: nil)
+        navigationController.visibleViewController?.present(alert, animated: true, completion: nil)
     }
 }
+
 
 extension FirstCoordinator: FirstViewModelDelegate {
 
     func displayAlert(for type: AlertType) {
-            self.showAlert(for: type)
+        self.showAlert(for: type)
     }
 }

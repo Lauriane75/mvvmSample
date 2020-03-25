@@ -18,7 +18,6 @@ class FirstViewController: UIViewController {
 
     var viewModel: FirstViewModel!
 
-
     // MARK: - View life cycle
 
     override func viewDidLoad() {
@@ -44,7 +43,7 @@ class FirstViewController: UIViewController {
 
     fileprivate func navigationBarCustom() {
         guard let bar = navigationController?.navigationBar else { return }
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.purple,
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red,
                               NSAttributedString.Key.font: UIFont(name: "kailasa", size: 20)]
         bar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
         viewModel.navBarTitle = { text in

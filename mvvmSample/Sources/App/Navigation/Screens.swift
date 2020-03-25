@@ -13,11 +13,9 @@ final class Screens {
     let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: Screens.self))
 
     private let context: Context
-    private let stack: CoreDataStack
 
-    init(context: Context, stack: CoreDataStack) {
+    init(context: Context) {
         self.context = context
-        self.stack = stack
     }
 }
 
@@ -28,9 +26,9 @@ extension Screens {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "FirstViewController") as! FirstViewController
         let repository = Repository(client: context.client,
-                                           stack: stack)
+                                    stack: context.stack)
         let viewModel = FirstViewModel(repository: repository,
-                                         delegate: delegate)
+                                       delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
     }
@@ -43,7 +41,7 @@ extension Screens {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "SecondViewController") as! SecondViewController
         let repository = Repository(client: context.client,
-        stack: stack)
+                                    stack: context.stack)
         let viewModel = SecondViewModel(repository: repository, delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
@@ -63,4 +61,3 @@ extension Screens {
         return alertViewController
     }
 }
-

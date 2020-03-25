@@ -14,6 +14,8 @@ final class SecondCoordinator {
 
     private let presenter: UINavigationController
 
+    var childCoordinator: CoordinatorProtocol? = nil
+
     private let screens: Screens
 
     // MARK: - Initializer
@@ -22,8 +24,11 @@ final class SecondCoordinator {
         self.presenter = presenter
         self.screens = screens
     }
+}
 
-    // MARK: - Coodinator
+    // MARK: - CoordinatorProtocol
+
+extension SecondCoordinator: CoordinatorProtocol {
 
     func start() {
         showSecondView()

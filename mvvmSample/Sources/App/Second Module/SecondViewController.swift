@@ -18,8 +18,6 @@ class SecondViewController: UIViewController {
 
     var viewModel: SecondViewModel!
 
-
-
     // MARK: - View life cycle
 
     override func viewDidLoad() {
@@ -48,6 +46,7 @@ class SecondViewController: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.purple,
                               NSAttributedString.Key.font: UIFont(name: "kailasa", size: 20)]
         bar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
+        
         viewModel.navBarTitle = { text in
             self.navigationItem.title = text
         }
